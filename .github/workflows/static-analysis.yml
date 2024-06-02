@@ -16,3 +16,8 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           docker run --rm -v "$(pwd):$(pwd)" -w "$(pwd)" rhysd/actionlint:latest
+  sleep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+    steps:
+      - run: sleep 120
